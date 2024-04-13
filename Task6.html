@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #4CAF50;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Conference Registration</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+            </div>
+            <div class="form-group">
+                <label for="affiliation">Affiliation:</label>
+                <input type="text" id="affiliation" name="affiliation">
+            </div>
+            <div class="form-group">
+                <label>Dietary Preferences:</label><br>
+                <input type="checkbox" id="vegetarian" name="diet[]" value="vegetarian">
+                <label for="vegetarian">Vegetarian</label>
+                <input type="checkbox" id="vegan" name="diet[]" value="vegan">
+                <label for="vegan">Vegan</label>
+                <input type="checkbox" id="gluten-free" name="diet[]" value="gluten-free">
+                <label for="gluten-free">Gluten-free</label>
+            </div>
+            <div class="form-group">
+                <label for="workshop">Preferred Workshop:</label>
+                <select id="workshop" name="workshop">
+                    <option value="workshop1">Workshop 1</option>
+                    <option value="workshop2">Workshop 2</option>
+                    <option value="workshop3">Workshop 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Registration Type:</label><br>
+                <input type="radio" id="general" name="registration" value="general">
+                <label for="general">General Attendee</label><br>
+                <input type="radio" id="student" name="registration" value="student">
+                <label for="student">Student</label><br>
+                <input type="radio" id="vip" name="registration" value="vip">
+                <label for="vip">VIP</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
